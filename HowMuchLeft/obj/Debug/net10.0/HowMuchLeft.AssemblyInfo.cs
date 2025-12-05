@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HowMuchLeft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f50f4aa5e4e210386df39fee89edd94e5c19b711")]
 [assembly: System.Reflection.AssemblyProductAttribute("HowMuchLeft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HowMuchLeft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

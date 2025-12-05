@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj": {}
+    "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj": {}
   },
   "projects": {
-    "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj": {
+    "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj",
+        "projectUniqueName": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj",
         "projectName": "HowMuchLeft",
-        "projectPath": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj",
-        "packagesPath": "/Users/madalinpopescu/.nuget/packages/",
-        "outputPath": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/obj/",
+        "projectPath": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj",
+        "packagesPath": "C:\\Users\\dizzy\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/madalinpopescu/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dizzy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\dizzy\\.dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
