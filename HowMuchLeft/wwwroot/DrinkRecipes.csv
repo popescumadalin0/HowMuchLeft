@@ -1,0 +1,19 @@
+﻿ProductName,Quantity,Coffee,Milk,Choco,Tea,Water
+Espresso ,50,12,,,,50
+Espresso Dublu,100,20,,,,100
+Espresso Lungo,80,12,,,,80
+Espresso cu lapte,100,12,40,,,60
+Americano,150,20,,,,150
+Americano cu lapte,220,20,50,,,170
+Cappuccino M,180,14,115,,,65
+Cappuccino L,270,18,180,,,90
+LATTE M,220,16,145,,,75
+LATTE L,290,20,200,,,90
+Flat White M,230,14,160,,,70
+Flat White L,300,20,200,,,100
+Barista,260,14,200,,,60
+Latte Machiato,250,20,150,,,100
+Mocha,270,14,90,20,,180
+Ciocolata calda,200,,,40,,200
+Ciocolata calda cu lapte,240,,60,40,,180
+Ceai,250,,,,15,250
