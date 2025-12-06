@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj": {}
+    "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj": {}
   },
   "projects": {
-    "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj": {
+    "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj",
+        "projectUniqueName": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj",
         "projectName": "HowMuchLeft",
-        "projectPath": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj",
-        "packagesPath": "C:\\Users\\dizzy\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\obj\\",
+        "projectPath": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj",
+        "packagesPath": "/Users/madalinpopescu/.nuget/packages/",
+        "outputPath": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dizzy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/madalinpopescu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -44,6 +44,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "Blazor.Bootstrap": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            },
             "Microsoft.AspNetCore.App.Internal.Assets": {
               "suppressParent": "All",
               "target": "Package",
@@ -86,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\dizzy\\.dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

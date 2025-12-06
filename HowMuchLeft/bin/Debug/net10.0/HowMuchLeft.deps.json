@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "HowMuchLeft/1.0.0": {
         "dependencies": {
+          "Blazor.Bootstrap": "3.5.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "10.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.0",
@@ -15,6 +16,14 @@
         },
         "runtime": {
           "HowMuchLeft.dll": {}
+        }
+      },
+      "Blazor.Bootstrap/3.5.0": {
+        "runtime": {
+          "lib/net10.0/BlazorBootstrap.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.0.0"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -804,6 +813,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Blazor.Bootstrap/3.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-26dwbF1z84v/e0zbUb+c58k7a4NBbdTselt5T766m0vqj7Pq0wWTokfu5C6svATCUppZm8eCS6+zIduaF7Wnwg==",
+      "path": "blazor.bootstrap/3.5.0",
+      "hashPath": "blazor.bootstrap.3.5.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

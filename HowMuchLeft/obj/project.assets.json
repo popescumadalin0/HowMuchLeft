@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "Blazor.Bootstrap/3.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/BlazorBootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/BlazorBootstrap.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazor.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Bootstrap.props": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1070,6 +1085,37 @@
     }
   },
   "libraries": {
+    "Blazor.Bootstrap/3.5.0": {
+      "sha512": "26dwbF1z84v/e0zbUb+c58k7a4NBbdTselt5T766m0vqj7Pq0wWTokfu5C6svATCUppZm8eCS6+zIduaF7Wnwg==",
+      "type": "package",
+      "path": "blazor.bootstrap/3.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "128X128.png",
+        "README.md",
+        "blazor.bootstrap.3.5.0.nupkg.sha512",
+        "blazor.bootstrap.nuspec",
+        "build/Blazor.Bootstrap.props",
+        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazor.Bootstrap.props",
+        "buildTransitive/Blazor.Bootstrap.props",
+        "lib/net10.0/BlazorBootstrap.dll",
+        "lib/net6.0/BlazorBootstrap.dll",
+        "lib/net8.0/BlazorBootstrap.dll",
+        "lib/net9.0/BlazorBootstrap.dll",
+        "staticwebassets/Blazor.Bootstrap.olwso25aue.bundle.scp.css",
+        "staticwebassets/blazor.bootstrap.css",
+        "staticwebassets/blazor.bootstrap.js",
+        "staticwebassets/blazor.bootstrap.pdf.js",
+        "staticwebassets/blazor.bootstrap.sortable-list.js",
+        "staticwebassets/blazor.bootstrap.theme-switcher.js",
+        "staticwebassets/icon/128X128.png",
+        "staticwebassets/pdfjs-4.0.379.min.js",
+        "staticwebassets/pdfjs-4.0.379.worker.min.js"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -3070,6 +3116,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Blazor.Bootstrap >= 3.5.0",
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 10.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 10.0.0",
@@ -3078,19 +3125,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dizzy\\.nuget\\packages\\": {}
+    "/Users/madalinpopescu/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj",
+      "projectUniqueName": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj",
       "projectName": "HowMuchLeft",
-      "projectPath": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\HowMuchLeft.csproj",
-      "packagesPath": "C:\\Users\\dizzy\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\HowMuchLeft\\HowMuchLeft\\obj\\",
+      "projectPath": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/HowMuchLeft.csproj",
+      "packagesPath": "/Users/madalinpopescu/.nuget/packages/",
+      "outputPath": "/Users/madalinpopescu/RiderProjects/HowMuchLeft/HowMuchLeft/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dizzy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/madalinpopescu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -3120,6 +3167,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Blazor.Bootstrap": {
+            "target": "Package",
+            "version": "[3.5.0, )"
+          },
           "Microsoft.AspNetCore.App.Internal.Assets": {
             "suppressParent": "All",
             "target": "Package",
@@ -3162,7 +3213,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\dizzy\\.dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
