@@ -8,23 +8,23 @@ namespace HowMuchLeft.Extensions;
 
 public static class DrinkProductExtensions
 {
-    public static IEnumerable<Drink> LoadDrinksFromCsv(this Stream stream)
+    public static List<Drink> LoadDrinksFromCsv(this Stream stream)
     {
         using var reader = new StreamReader(stream);
         using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
         csv.Context.RegisterClassMap<DrinkMap>();
         var records = csv.GetRecords<Drink>();
 
-        return records;
+        return records.ToList();
     }
 
-    public static IEnumerable<Drink> CleanNames(this IEnumerable<Drink> drinks)
+    public static List<Drink> CleanNames(this List<Drink> drinks)
     {
         var result = new List<Drink>();
 
         foreach (var drink in drinks)
         {
-            drink.Recipe.NormalizeProductNames();
+            drink.Recipe = drink.Recipe.NormalizeProductNames();
             result.Add(drink);
         }
 

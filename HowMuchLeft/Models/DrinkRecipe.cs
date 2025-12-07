@@ -1,3 +1,5 @@
+using CsvHelper.Configuration;
+
 namespace HowMuchLeft.Models;
 
 public class DrinkRecipe
@@ -22,5 +24,23 @@ public class DrinkRecipe
     {
         return
             $"{ProductName} | Volume: {VolumeMilliliters} ml | Coffee: {Coffee} | Milk: {Milk} | Choco: {Choco} | Tea: {Tea} | Water: {Water}";
+    }
+}
+
+public sealed class DrinkRecipeMap : ClassMap<DrinkRecipe>
+{
+    public DrinkRecipeMap()
+    {
+        Map(d => d.ProductName).Name("ProductName");
+        Map(d => d.VolumeMilliliters)
+            .Name("VolumeMilliliters")
+            .Optional()
+            .Default(0)
+            .TypeConverterOption.NullValues(string.Empty);
+        Map(d => d.Coffee).Name("Coffee").Optional().Default(0).TypeConverterOption.NullValues(string.Empty);
+        Map(d => d.Milk).Name("Milk").Optional().Default(0).TypeConverterOption.NullValues(string.Empty);
+        Map(d => d.Choco).Name("Choco").Optional().Default(0).TypeConverterOption.NullValues(string.Empty);
+        Map(d => d.Tea).Name("Tea").Optional().Default(0).TypeConverterOption.NullValues(string.Empty);
+        Map(d => d.Water).Name("Water").Optional().Default(0).TypeConverterOption.NullValues(string.Empty);
     }
 }

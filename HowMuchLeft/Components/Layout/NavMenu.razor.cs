@@ -11,6 +11,8 @@ public partial class NavMenu
 {
     private string? _currentUrl;
 
+    private const string _drinkRecipesPath = "wwwroot/Recipes/DrinkRecipes.csv";
+
     protected override async Task OnInitializedAsync()
     {
         _currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
@@ -29,7 +31,7 @@ public partial class NavMenu
                 return;
             }
 
-            var drinkRecipes = "wwwroot/DrinkRecipes.csv".LoadRecipesFromCsv().CleanNames().ToList();
+            var drinkRecipes = _drinkRecipesPath.LoadRecipesFromCsv().CleanNames().ToList();
             await ProtectedLocalStorage.SetAsync(DrinkRecipe.BrowserStorageKey, drinkRecipes);
             await base.OnAfterRenderAsync(firstRender);
         }

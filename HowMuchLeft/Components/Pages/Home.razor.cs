@@ -16,7 +16,10 @@ public partial class Home
             return;
         }
 
-        var drinks = file.OpenReadStream().LoadDrinksFromCsv().CleanNames().ToList();
+        var memoryStream = new MemoryStream();
+        await file.OpenReadStream().CopyToAsync(memoryStream);
+
+        var drinks = memoryStream.LoadDrinksFromCsv().CleanNames().ToList();
 
         Snackbar.Add("File uploaded successfully", MudBlazor.Severity.Success);
     }

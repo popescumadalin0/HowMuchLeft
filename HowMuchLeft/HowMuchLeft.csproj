@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Update="wwwroot\DrinkRecipes.csv">
+      <Content Update="wwwroot\Recipes\DrinkRecipes.csv">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

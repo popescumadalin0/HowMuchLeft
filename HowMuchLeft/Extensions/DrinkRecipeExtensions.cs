@@ -9,25 +9,26 @@ namespace HowMuchLeft.Extensions;
 
 public static partial class DrinkRecipeExtensions
 {
-    public static IEnumerable<DrinkRecipe> LoadRecipesFromCsv(this string path)
+    public static List<DrinkRecipe> LoadRecipesFromCsv(this string path)
     {
         if (!File.Exists(path))
             throw new FileNotFoundException($"CSV file not found: {path}");
 
         using var reader = new StreamReader(path);
         using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+        csv.Context.RegisterClassMap<DrinkRecipeMap>();
 
         var records = csv.GetRecords<DrinkRecipe>();
 
-        return records;
+        return records.ToList();
     }
 
-    public static IEnumerable<DrinkRecipe> CleanNames(this IEnumerable<DrinkRecipe> drinkRecipes)
+    public static List<DrinkRecipe> CleanNames(this List<DrinkRecipe> drinkRecipes)
     {
         var result = new List<DrinkRecipe>();
         foreach (var drinkRecipe in drinkRecipes)
         {
-            drinkRecipe.ProductName.NormalizeProductNames();
+            drinkRecipe.ProductName = drinkRecipe.ProductName.NormalizeProductNames();
             result.Add(drinkRecipe);
         }
 

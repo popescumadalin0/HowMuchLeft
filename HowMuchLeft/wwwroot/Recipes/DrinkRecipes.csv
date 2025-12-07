@@ -1,5 +1,5 @@
-﻿ProductName,Quantity,Coffee,Milk,Choco,Tea,Water
-Espresso ,50,12,,,,50
+﻿ProductName,VolumeMilliliters,Coffee,Milk,Choco,Tea,Water
+Espresso,50,12,,,,50
 Espresso Dublu,100,20,,,,100
 Espresso Lungo,80,12,,,,80
 Espresso cu lapte,100,12,40,,,60

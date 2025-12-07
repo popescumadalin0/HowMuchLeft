@@ -6,6 +6,6 @@ public sealed class DrinkMap : ClassMap<Drink>
 {
     public DrinkMap()
     {
-        Map(d => d.Recipe).Name("Recipe");
+        Map(d => d.Recipe).Name("Recipe", " Recipe ", "recipe", "RECIPE", "Recipe ");
     }
 }
