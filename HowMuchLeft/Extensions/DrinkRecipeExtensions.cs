@@ -1,6 +1,5 @@
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 using CsvHelper;
 using HowMuchLeft.Models;
@@ -40,8 +39,27 @@ public static partial class DrinkRecipeExtensions
         var name = productName.ToLowerInvariant();
 
         name = LowerAlphabetRegex().Replace(name, "");
-
+        name = RemoveConsecutiveDuplicates(name);
         return name;
+    }
+
+    private static string RemoveConsecutiveDuplicates(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return input;
+
+        var sb = new StringBuilder();
+        var last = '\0';
+
+        foreach (var c in input)
+        {
+            if (c != last)
+                sb.Append(c);
+
+            last = c;
+        }
+
+        return sb.ToString();
     }
 
     [GeneratedRegex("[^a-z]")]

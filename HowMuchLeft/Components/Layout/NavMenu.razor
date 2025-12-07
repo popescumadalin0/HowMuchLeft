@@ -1,24 +1,11 @@
-﻿@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
-@implements IDisposable
-@rendermode InteractiveServer
+﻿@inject NavigationManager NavigationManager
 
-@inject NavigationManager NavigationManager
-@inject ProtectedLocalStorage ProtectedLocalStorage
-
-<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">HowMuchLeft</a>
-    </div>
-</div>
-
-<input type="checkbox" title="Navigation menu" class="navbar-toggler"/>
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-    </nav>
-</div>
+<MudNavMenu Class="mudblazor-navmenu">
+    <div class="docs-nav-fader"></div>
+    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Calculate" HREF="/">How much
+        left?
+    </MudNavLink>
+    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Edit" Href="/edit-recipes">Edit
+        recipes
+    </MudNavLink>
+</MudNavMenu>

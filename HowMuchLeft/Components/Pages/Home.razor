@@ -1,8 +1,10 @@
 ﻿@page "/"
 
-@rendermode InteractiveServer
-
 @inject ISnackbar Snackbar
+
+<PageTitle>How much left?</PageTitle>
+
+<br/>
 
 <MudFileUpload T="IBrowserFile" FilesChanged="@UploadFilesAsync" Accept=".csv" MaximumFileCount="1">
     <ActivatorContent>
@@ -13,3 +15,29 @@
         </MudButton>
     </ActivatorContent>
 </MudFileUpload>
+<br/>
+<MudDivider/>
+
+<MudCard>
+    <CardTitle>Totals of ingredients consumed based on your report</CardTitle>
+    <MudCardContent>
+        <MudText>
+            @FileUploaded
+        </MudText>
+        <MudTextField Value="@TotalCoffee" ReadOnly Label="Total Coffee" Variant="Variant.Outlined"
+                      Adornment="Adornment.End"
+                      AdornmentText="g" AdornmentColor="Color.Info"/>
+        <MudTextField Value="@TotalChoco" ReadOnly Label="Total Choco" Variant="Variant.Outlined"
+                      Adornment="Adornment.End"
+                      AdornmentText="g" AdornmentColor="Color.Info"/>
+        <MudTextField Value="@TotalTea" ReadOnly Label="Total Tea" Variant="Variant.Outlined"
+                      Adornment="Adornment.End"
+                      AdornmentText="g" AdornmentColor="Color.Info"/>
+        <MudTextField Value="@TotalMilk" ReadOnly Label="Total Milk" Variant="Variant.Outlined"
+                      Adornment="Adornment.End"
+                      AdornmentText="ml" AdornmentColor="Color.Info"/>
+        <MudTextField Value="@TotalWater" ReadOnly Label="Total Water" Variant="Variant.Outlined"
+                      Adornment="Adornment.End"
+                      AdornmentText="ml" AdornmentColor="Color.Info"/>
+    </MudCardContent>
+</MudCard>
