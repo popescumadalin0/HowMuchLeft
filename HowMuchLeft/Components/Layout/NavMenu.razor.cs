@@ -1,6 +1,9 @@
-using Microsoft.AspNetCore.Components;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using HowMuchLeft.Extensions;
+using HowMuchLeft.Models;
 using Microsoft.AspNetCore.Components.Routing;
-using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 
 namespace HowMuchLeft.Components.Layout;
 
@@ -18,8 +21,16 @@ public partial class NavMenu
     {
         if (firstRender)
         {
-            var drinkRecipes = DrinkRecipe.LoadFromCsv("wwwroot/DrinkRecipes.csv");
-            await ProtectedLocalStorage.SetAsync("DrinkRecipes", drinkRecipes);
+            var existingDrinkRecipes =
+                await ProtectedLocalStorage.GetAsync<IEnumerable<DrinkRecipe>>(DrinkRecipe.BrowserStorageKey);
+            if (existingDrinkRecipes.Success)
+            {
+                await base.OnAfterRenderAsync(firstRender);
+                return;
+            }
+
+            var drinkRecipes = "wwwroot/DrinkRecipes.csv".LoadRecipesFromCsv().CleanNames().ToList();
+            await ProtectedLocalStorage.SetAsync(DrinkRecipe.BrowserStorageKey, drinkRecipes);
             await base.OnAfterRenderAsync(firstRender);
         }
     }
